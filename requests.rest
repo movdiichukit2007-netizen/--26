@@ -1,0 +1,43 @@
+### 1. Отримання всіх відправлень (GET)
+GET http://localhost:5000/postings
+
+### 2. Отримання відправлення за ідентифікатором (GET)
+GET http://localhost:5000/postings/1
+
+### 3. Створення нового відправлення (POST)
+POST http://localhost:5000/postings
+Content-Type: application/json
+
+{
+  "from": "Рівне",
+  "to": "Луцьк",
+  "content": "Подарунок",
+  "deliveryType": 0,
+  "weight": 2.5,
+  "width": 20,
+  "height": 15,
+  "depth": 10,
+  "value": 500,
+  "price": 120
+}
+
+### 4. Оновлення наявного відправлення (PUT)
+PUT http://localhost:5000/postings/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "from": "Рівне",
+  "to": "Київ",
+  "content": "Оновлений подарунок",
+  "deliveryType": 1,
+  "weight": 3.0,
+  "width": 25,
+  "height": 15,
+  "depth": 10,
+  "value": 600,
+  "price": 150
+}
+
+### 5. Видалення відправлення (DELETE)
+DELETE http://localhost:5000/postings/1
