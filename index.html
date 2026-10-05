@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практична робота - Fetch API</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Список поштових відправлень (PostService)</h1>
+
+    <div class="controls">
+        <button id="btn-refresh">Оновити список</button>
+        <button id="btn-add">Додати тестовий запис</button>
+    </div>
+
+    <p id="status">Завантаження відправлень…</p>
+
+    <table>
+        <thead id="table-header">
+            <tr>
+                <th scope="col" x-column="content">Вміст</th>
+                <th scope="col" x-column="from">Відправник</th>
+                <th scope="col" x-column="to">Одержувач</th>
+                <th scope="col" x-column="deliveryType">Тип доставки</th>
+                <th scope="col" class="number" x-column="weight">Вага, кг</th>
+                <th scope="col" class="number" x-column="width">Ширина, см</th>
+                <th scope="col" class="number" x-column="height">Висота, см</th>
+                <th scope="col" class="number" x-column="depth">Довжина, см</th>
+                <th scope="col" class="number" x-column="value">Оголошена вартість</th>
+                <th scope="col" class="number" x-column="price">Ціна доставки</th>
+            </tr>
+        </thead>
+        <tbody id="postings">
+            <!-- Дані додаються з JavaScript -->
+        </tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+</html>
